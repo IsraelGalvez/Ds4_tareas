@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Peliculas {% endblock %}
+{% block content %}
+<main class="main">
+    <div class="main-h1">
+        <h1>Películas ordenadas por nombre</h1>
+    </div>
+    <section class="movies-container">
+        {% for pelicula in object_list %}
+            <form class="form-movies" method="GET">
+                <a class="movie-container" href="{% url 'peliculas_app:pelicula' pk=pelicula.id %}">
+                    <figure class="movie-image">
+                        <img src="{{pelicula.url_imagen}}" alt="Imagen del producto">
+                    </figure>
+                    <p class="movie-title">{{pelicula.titulo}}</p>
+                </a>
+            </form>
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'peliculas/css/pelicula.css' %}">
+    <link rel="stylesheet" href="{% static 'peliculas/css/main.css' %}">
+    
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <figure>
+                <a href="{% url 'peliculas_app:home' %}"><img src="{% static 'peliculas/img/logo.png' %}" alt=""></a>
+            </figure>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li class="nav-ul-li"><a href="{% url 'peliculas_app:nombre' %}">Nombre</a></li>
+                    <li class="nav-ul-li nav-ul-li-margin"><a href="{% url 'peliculas_app:nombreOriginal' %}">Nombre original</a></li>
+                    <li class="nav-ul-li"><a href="{% url 'peliculas_app:fecha' %}">Fecha</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% block content %} {% endblock %}
+</body>
+</html>

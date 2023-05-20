@@ -1,0 +1,141 @@
+
+.main2{
+    width: 100%;
+    height: 80vh;
+    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container-movie{
+    display: flex;
+    width: 1000px;
+    min-width: 805px;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.img-container{
+    width: 410px;
+}
+
+.line{
+    width: 10px;
+    height: 450px;
+    border-left: 10px solid #454545;
+}
+
+.movie-info{
+    max-width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-pelicula {
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.main-title{
+    font-size: 4rem;
+    display: flex;
+}
+
+.title{
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.original-title{
+    display: flex;
+    font-size: 2rem;
+}
+
+.title-original{
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.movie-date{
+    display: flex;
+    font-size: 1.6rem;
+}
+
+.date{
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.movie-sinopsis{
+    margin-top: 15px;
+    max-width: 400px;
+    font-size: 1.6rem;
+}
+
+.sinopsis{
+    font-weight: 100;
+}
+
+@media screen and (max-width: 815px){
+    .line{
+        display: none;
+    }
+
+    .img-container{
+        margin-top: 100px;
+    }
+
+    .movie-info{
+        justify-content: start;
+        align-items: center;
+        max-width: 600px;
+        margin-top: 50px;
+    }
+    
+    .img-container{
+        width: 600px;
+    }
+
+    .img-pelicula {
+        width: 600px;
+        height: 650px;
+    }
+
+    .movie-info{
+        width: 600px;
+    }
+
+    .main-title{
+        width: 500px;
+        font-size: 5rem;
+    }
+    
+    
+    .original-title{
+        display: flex;
+        font-size: 3rem;
+        width: 500px;
+    }
+    
+    
+    .movie-date{
+        display: flex;
+        width: 500px;
+        font-size: 2.1rem;
+    }
+    
+    .movie-sinopsis{
+        max-width: 500px;
+        margin-top: 15px;
+        font-size: 2.1rem;
+    }
+
+}

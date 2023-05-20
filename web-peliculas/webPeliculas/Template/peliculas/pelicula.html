@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{pelicula.titulo}} {% endblock %}
+{% block content %}
+<main class="main2">
+    <div class="container-movie">
+        <section class="img-container">
+            <figure>
+                <img class="img-pelicula" src="{{pelicula.url_imagen}}" alt="">
+            </figure>
+        </section>
+        <section class="line">
+
+        </section>
+        <section class="movie-info">
+            <h1 class="main-title">Titulo: <p class="title">{{pelicula.titulo}}</p></h1>
+            <h2 class="original-title">Titulo original: <p class="title-original">{{pelicula.titulo_original}}</p></h2>
+            <h3 class="movie-date">Fecha de estreno:<p class="date">{{pelicula.fecha_estreno}}</p></h3>
+            <h3 class="movie-sinopsis">Sinopsis:<p class="sinopsis">{{pelicula.sinopsis}}</p></h3>
+        </section>
+    </div>
+</main>
+{% endblock %}
